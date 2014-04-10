@@ -1,4 +1,4 @@
 test-gradle
 ===========
 
-test samples forgradle
+test samples for gradle
