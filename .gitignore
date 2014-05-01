@@ -2,12 +2,9 @@
 *.classpath
 /.metadata
 
-/HelloWorld/.settings
-/HelloWorld/bin
-/HelloWorld/build
-/HelloWorld/.gradle
+/*/.settings
+/*/bin
+/*/build
+/*/.gradle
 
-/HelloWeb/.settings
-/HelloWeb/bin
-/HelloWeb/build
-/HelloWeb/.gradle
+
