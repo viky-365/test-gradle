@@ -1,7 +1,13 @@
 *.project
 *.classpath
 /.metadata
+
 /HelloWorld/.settings
 /HelloWorld/bin
 /HelloWorld/build
 /HelloWorld/.gradle
+
+/HelloWeb/.settings
+/HelloWeb/bin
+/HelloWeb/build
+/HelloWeb/.gradle
