@@ -1,4 +1,30 @@
 apply plugin: 'java'
+apply plugin: 'sonar-runner'
+apply plugin: 'jacoco'
+
+
+jacoco {
+    toolVersion = "0.6.2.201302030002"
+    reportsDir = file("$buildDir/jacoco")
+}
+
+jacocoTestReport {
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports after running tests."
+    additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
+}
+
+
+sonarRunner {
+    sonarProperties {
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.jdbc.url", "jdbc:mysql://localhost:3306/sonar"
+        property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+        property "sonar.jdbc.username", "root"
+        property "sonar.jdbc.password", "root"
+        property "sonar.java.coveragePlugin", "jacoco"        
+    }
+}
 
 repositories {
     mavenCentral()
