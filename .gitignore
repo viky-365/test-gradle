@@ -2,6 +2,9 @@
 *.classpath
 /.metadata
 
+*.idea
+*.iml
+
 /*/.settings
 /*/bin
 /*/build

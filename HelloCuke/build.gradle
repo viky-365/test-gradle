@@ -1,0 +1,10 @@
+apply plugin: 'eclipse'
+apply plugin: 'java'
+
+repositories { mavenCentral() }
+
+dependencies {
+	testCompile 'info.cukes:cucumber-java:1.1.7'
+	testCompile 'info.cukes:cucumber-junit:1.1.7'
+	testCompile 'junit:junit:4.11'
+}
