@@ -10,9 +10,6 @@
 		http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-
-    <context:annotation-config></context:annotation-config>
-    <context:component-scan base-package="com.hello"></context:component-scan>
     <!-- Database -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -26,10 +23,8 @@
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="persistenceUnitName" value="testUnit"/>
-        <property name="packagesToScan" value="com.hello.entities"/>
+        <!--<property name="packagesToScan" value="com.hello.entities"/>-->
     </bean>
-
-    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
 
     <!-- Transaction Manager -->
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
