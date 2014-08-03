@@ -15,13 +15,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class PersonRepositoryTest {
 
     @Autowired
-    PersonRepository repository;
+    PersonRepository personRepository;
 
 
     @Test
     public void getPersonTest(){
         System.out.print("Hello World");
-        System.out.print(repository.findAll());
+        System.out.print(personRepository.findAll());
 
     }
 }
